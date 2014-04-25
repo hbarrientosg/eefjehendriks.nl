@@ -1,0 +1,44 @@
+@import 'base'
+
+body
+  font-family: 'candararegular', sans-serif
+
+header
+  margin: 2em
+
+.logo-cover
+
+.logo
+  position: relative
+  width: 10em
+  height: 10em
+
+  color: $logo-font-color
+  border: 2px dashed $logo-color-bg
+  border-radius: 50%
+  padding: 2px
+
+  .wrapper
+    margin: 2em auto
+    .name
+      margin: auto 10px
+      font-size: 1.4em
+      text-align: center
+
+    .subtitle
+      margin-top: 12px
+      text-align: center
+      vertical-align: middle
+
+.logo:before
+  position: absolute
+  top: 2px
+  right: 2px
+  left: 2px
+  bottom: 2px
+  z-index: -1
+
+  content: ''
+
+  border-radius: 50%
+  background-color: $logo-color-bg
