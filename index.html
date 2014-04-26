@@ -14,53 +14,42 @@
         </script>
 
     </head>
-    <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <body>         
         <header>
+            <div class="wrapper">
+                <nav class="main-nav">
+                    <a href="#">Architecture</a>
+                    <a href="#">Graphics</a>
+                    <a href="#">Development</a>
+                    <a href="#">Workshops</a>
+                    <a href="#">Personal</a>
+                </nav>
+                <nav class="main-culture" style="display:none">
+                    <a href="">NL</a>
+                    <a href="">EN</a>
+                    <a href="">ES</a>
+                </nav>              
+            </div>
             <div class="logo">
-                <div class="wrapper">
-                    <div class="name font-sansumi">EEFJE HENDRIKS</div>
-                    <div class="subtitle">Arquitect & Product Developer</div>
+                <div class="shape">
+                    <a class="logo-content">
+                        <div class="name font-sansumi">EEFJE HENDRIKS</div>
+                        <div class="subtitle">Arquitect & Product Developer</div>
+                    </a>
                 </div>
             </div>
-            <div class="main-nav">
-                <ul class="font-candara">
-                    <li><a>Architecture</a>a</li>
-                    <li>Products</li>
-                    <li>Graphics</li>
-                    <li>Development</li>
-                    <li>Workshops</li>
-                    <li>Personal</li>
-                </ul>
-            </div>
-            <div class="main-culture">
-                <ul class="font-candara">
-                    <li><a href="">NL</a></li>
-                    <li><a href="">EN</a></li>
-                    <li><a href="">ES</a></li>
-                </ul>
-            </div>
-        </header>
-        <div class="container">
-            <div>
-                <img src="images/carrusel/Ritter2_o.jpg" style="display: none" />
-            </div>
-        </div>
-        <div>
-            <ul>
-                <li style="display: none"><a href="http://tympanus.net/Tutorials/FullscreenSlitSlider/index2.html"></li></li>
-
-                <!-- -->
-
-            </ul>
+        </header> 
+        <div id="slides-container">
+            <img data-slidr="one" src="images/architecture/emergency-strategy-Haiti/Doorsnedeschets.jpg" />
+           <img data-slidr="two" src="images/architecture/emergency-strategy-Haiti/Fasering.jpg" />
+           <img data-slidr="three" src="images/architecture/emergency-strategy-Haiti/hartzw.jpg" />
         </div>
 
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="scripts/slidr.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
