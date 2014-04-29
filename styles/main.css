@@ -24,11 +24,13 @@ body {
   overflow: hidden;
   width: 100%; }
 
-header {
+header,
+.body-container {
   width: 90%;
   margin: 0 auto; }
-  header nav {
-    display: inline-block; }
+
+header nav {
+  display: inline-block; }
 
 header > .wrapper {
   padding-top: 3em; }
@@ -129,6 +131,9 @@ header > .wrapper {
     transform: translateY(0px); }
   .main-nav .main-culture {
     display: none; }
+
+section {
+  margin: 10em; }
 
 #slides-container {
   width: 90%;
