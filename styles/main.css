@@ -135,6 +135,9 @@ header > .wrapper {
   margin: 0 auto; }
   #slides-container li {
     text-align: center; }
-  #slides-container img {
+  #slides-container div {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 500px;
-    width: auto; }
+    width: 100%; }
