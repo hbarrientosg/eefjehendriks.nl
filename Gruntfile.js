@@ -347,9 +347,22 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+        // Publish on gh-pages github
+        'gh-pages': {
+            options: {
+                base: '<%= yeoman.dist %>',
+                repo: 'https://github.com/isejaa/eefjehendriks.nl.git',
+                user: {
+                    name: 'Humberto Barrientos',
+                    email:'hawksmoor@gmail.com'
+                }
+            },
+            src: ['**/*']
         }
     });
 
+    grunt.loadNpmTasks('grunt-gh-pages');
 
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
