@@ -1,0 +1,16 @@
+@import "compass/reset";
+
+@import "compass/css3/font-face";
+
+@include font-face(
+    "candara",
+    font-files(
+        "candara-webfont.woff"
+    ), "candara-webfont.eot", normal, normal);
+@include font-face(
+    "sansumi",
+    font-files(
+        "sansumi-ultralight-webfont.woff"
+    ), "sansumi-ultralight-webfont.eot", normal, normal);
+
+ul { list-style: none outside; }

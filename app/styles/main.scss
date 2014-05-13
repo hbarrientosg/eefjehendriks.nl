@@ -1,15 +1,23 @@
+@import "layout";
+
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+  font-family: "candara", Arial, sans-serif;
 }
+
+.page-wrap {
+  width: 90%;
+  max-width: 1350px;
+  margin: 0 auto 40px;
+}
+
+
 
 .logo {
    width: 300px;
    height: 300px;
    position: absolute;
    left: 50%;
-   top: 50%; 
+   top: 50%;
    margin-left: -150px;
    margin-top: -150px;
 
@@ -17,3 +25,5 @@ body {
         width: 100%;
     }
 }
+
+@import "portfolio";
