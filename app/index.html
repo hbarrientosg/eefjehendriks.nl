@@ -24,9 +24,11 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="header-wrapper">
+        <div class="header-wrap">
             <header>
-                <div class="logo"></div>
+                <a class="logo" href="/">
+                    <img src="images/logo.png" />
+                </a>
                 <nav class="nav">
                     <a href="#" data-src="tmpl/en.arch.html">
                         Architecture
@@ -36,19 +38,23 @@
                     </a>
                     <a href="#">Drawings</a>
                     <a href="#">Workshops</a>
-                    <a href="#">Personal</a>
+                    <a href="#" data-src="tmpl/en.pers.html">
+                        Personal
+                    </a>
                 </nav>
             </header>
             <div class="container">
-
             </div>
         </div>
-
+        <div class="carrousel">
+        </div>
 
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/onScreen/jquery.onscreen.js"></script>
+        <script src="bower_components/jquery-backstretch/jquery.backstretch.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
