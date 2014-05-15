@@ -11,6 +11,7 @@
 
             $this.parent('.nav').find('.active').removeClass('active');
             $this.addClass('active');
+            $('.backstretch').hide();
 
             MenuItem.prototype.load($this.data('src'), function() {
                 $('div.container .personal-box').onScreen({
@@ -28,7 +29,7 @@
             columnNumb = 1;
 
         if (winWidth > 1024) {
-            columnNumb = 4;
+            columnNumb = 3;
         } else if (winWidth > 900) {
             columnNumb = 2;
         } else if (winWidth > 479) {

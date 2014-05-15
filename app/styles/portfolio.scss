@@ -1,3 +1,4 @@
+@import "compass/css3/transform";
 @import "compass/css3/transition";
 
 .portfolio {
@@ -6,7 +7,7 @@
     overflow: hidden;
     .portfolio-item {
         position: relative;
-        width: 25%;
+        width: 33%;
         display: inline-block;
         float: left;
         overflow: hidden;
