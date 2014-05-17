@@ -21,10 +21,9 @@
                     $('section.personal').removeClass('hidden');
                     break;
                 default:
-                    $('section.load').load($(this).data('src'), function() {
-                        //.removeClass('hidden');
-                    });
+                    loadProject.call(this, $(this).prop('href'));
             }
+            return false;
         },
         onClick: function (event) {
             var $this = $(this),
@@ -44,7 +43,39 @@
                     tolerance: 50
                 });*/
             //});
+            return false;
+        },
+        onToggle: function( event ){
+            var $this = $(this),
+                $parent = $this.parent('nav');
+            console.log('TODO: Implement this.')
+
         }
+    }
+
+    function openProject(event) {
+        var url = $(this).prop('href');
+
+        loadProject.call(this, url);
+
+        return false;
+    }
+
+    function loadProject(url) {
+        $('.project-load').load(url, function() {
+            $('section.container').addClass('hidden');
+            $(this).removeClass('hidden');
+
+            var mySwiper = new Swiper(this, {
+                wrapperClass: 'container-wrapper',
+                slideClass: 'project-image',
+                slidesPerView: 'auto',
+                scrollContainer: true,
+                mousewheelControl: true
+            });
+
+            imageSize();
+        });
     }
 /*
     function splitColumns() {
@@ -75,24 +106,31 @@
             });
         });
     }
-
-    function setProjects() {
-        //setColumns();
-    }
 */
+    function imageSize() {
+        var height = $(window).height();
+
+        $('.project-image').height( height - 200 );
+    }
+
     $(document)
-        .on('click','.navigation a', MenuItem.prototype.onClick)
+        .on('click','.navigation nav a', MenuItem.prototype.onClick)
+        .on('click', '.navigation .toggle', MenuItem.prototype.onToggle)
+        .on('click', '.container .project-item a', openProject)
         .ready(function() {
             $.backstretch([
-                "images/panorama/buerchenMystik1.2x.jpg"
-              , "images/panorama/buerchenMystik2.2x.jpg"
-              , "images/panorama/buerchenMystik3.2x.jpg"
-              , "images/panorama/drawing1.2x.jpg"
-              , "images/panorama/drawing2.2x.jpg"
-              , "images/panorama/drawing3.2x.jpg"
-              , "images/panorama/graduationProject1.2x.jpg"
-              , "images/panorama/graduationProject2.2x.jpg"
-              , "images/panorama/graduationProject3.2x.jpg"
+                "images/panorama/01_Panarama 2x.jpg"
+              , "images/panorama/02_Panarama 2x.jpg"
+              , "images/panorama/03_Panarama 2x.jpg"
+              , "images/panorama/04_Panarama 2x.jpg"
+              , "images/panorama/05_Panarama 2x.jpg"
+              , "images/panorama/06_Panarama 2x.jpg"
+              , "images/panorama/07_Panarama 2x.jpg"
+              , "images/panorama/08_Panarama 2x.jpg"
+              , "images/panorama/09_Panarama 2x.jpg"
+              , "images/panorama/10_Panarama 2x.jpg"
+              , "images/panorama/11_Panarama 2x.jpg"
+              , "images/panorama/12_Panarama 2x.jpg"
             ], {duration: 3000, fade: 750});
 
             mySwiper = new Swiper('section.architecture', {
@@ -104,8 +142,8 @@
             })
         });
 
-/*
+
     $(window)
-        .on('resize', setProjects);
-*/
+        .on('resize', imageSize);
+
 })(window.jQuery);

@@ -16,6 +16,19 @@ section.container {
     /* Fix of Webkit flickering */
     z-index:1;
 }
+section.project-load {
+    margin: 0 auto;
+    position:relative;
+    overflow:hidden;
+    width: 100%;
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    backface-visibility:hidden;
+    /* Fix of Webkit flickering */
+    z-index:1;
+}
 
 div.container-wrapper {
     position:relative;
@@ -55,11 +68,21 @@ div.container-wrapper {
         display: block;
         width: 500px;
         height: 100%;
-        float: left;
+
+        a {
+            display: block;
+            height: 100%;
+        }
+    }
+
+    .project-image {
+        height: 600px;
+        padding: 5px;
+
     }
 }
-
-.portfolio-item { float: left; }
+.project-image,
+.project-item { float: left; }
 
 .portfolio {
 
