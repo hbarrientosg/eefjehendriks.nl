@@ -1,29 +1,52 @@
 (function() {
+    var mySwiper = null;
 
     var MenuItem = function MenuItem() {};
     MenuItem.prototype = {
         constructor: MenuItem,
-        load: function ( src, callback ) {
-            $('.container').load(src, callback)
+        load: function ( name ) {
+            $('.backstretch').hide();
+            $('section.container').addClass('hidden')
+            switch (name) {
+                case 'architecture':
+                    $('section.architecture').removeClass('hidden');
+                    break;
+                case 'development':
+                    $('section.development').removeClass('hidden');
+                    break;
+                case 'contact':
+                    $('section.contact').removeClass('hidden');
+                    break;
+                case 'personal':
+                    $('section.personal').removeClass('hidden');
+                    break;
+                default:
+                    $('section.load').load($(this).data('src'), function() {
+                        //.removeClass('hidden');
+                    });
+            }
         },
         onClick: function (event) {
-            var $this = $(this);
+            var $this = $(this),
+                $parent = $this.parent('nav');
 
-            $this.parent('.nav').find('.active').removeClass('active');
+            $('.active', $parent).removeClass('active');
             $this.addClass('active');
-            $('.backstretch').hide();
+            MenuItem.prototype.load.call($this, $this.data('name'));
+            mySwiper.resizeFix();
 
+            /*
             MenuItem.prototype.load($this.data('src'), function() {
                 $('div.container .personal-box').onScreen({
                     container: '.personal-wrap',
                     direction: 'horizontal',
                     toggleClass: 'show',
                     tolerance: 50
-                });
-            });
+                });*/
+            //});
         }
     }
-
+/*
     function splitColumns() {
         var winWidth = $(window).width(),
             columnNumb = 1;
@@ -54,11 +77,11 @@
     }
 
     function setProjects() {
-        setColumns();
+        //setColumns();
     }
-
+*/
     $(document)
-        .on('click','header .nav a', MenuItem.prototype.onClick)
+        .on('click','.navigation a', MenuItem.prototype.onClick)
         .ready(function() {
             $.backstretch([
                 "images/panorama/buerchenMystik1.2x.jpg"
@@ -72,10 +95,17 @@
               , "images/panorama/graduationProject3.2x.jpg"
             ], {duration: 3000, fade: 750});
 
-            //$('.nav .active').trigger('click');
+            mySwiper = new Swiper('section.architecture', {
+                wrapperClass: 'container-wrapper',
+                slideClass: 'project-item',
+                slidesPerView: 'auto',
+                scrollContainer: true,
+                mousewheelControl: true
+            })
         });
 
+/*
     $(window)
         .on('resize', setProjects);
-
+*/
 })(window.jQuery);

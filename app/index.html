@@ -15,6 +15,7 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="bower_components/swiper/src/idangerous.swiper.css" />
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <script src="bower_components/modernizr/modernizr.js"></script>
@@ -24,28 +25,49 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="header-wrap">
-            <header>
-                <a class="logo" href="/">
-                    <img src="images/logoFlat.png" />
+        <header>
+            <a class="logo" href="index.html">
+                Eefje Hendriks
+            </a>
+            <nav class="navigation">
+                <a href="#" data-name="architecture">
+                    Architecture
                 </a>
-                <nav class="nav">
-                    <a href="#" dta-src="tmpl/en.arch.html">
-                        Architecture
-                    </a>
-                    <a href="#" dta-src="tmpl/en.dev.html">
-                        Development
-                    </a>
-                    <a href="#">Drawings</a>
-                    <a href="#">Workshops</a>
-                    <a href="#" dta-src="tmpl/en.pers.html">
-                        Personal
-                    </a>
-                </nav>
-            </header>
-            <div class="container">
+                <a href="#" data-name="development">
+                    Development
+                </a>
+                <a href="#">
+                    Drawings
+                </a>
+                <a href="#" data-name="personal">
+                    Personal
+                </a>
+                <a href="#" data-name="contact">
+                    Contact
+                </a>
+            </nav>
+        </header>
+        <section class="architecture container color-1 hidden">
+            <div class="container-wrapper">
+                <article class="project-item color-1"></article>
+                <article class="project-item color-2"s></article>
+                <article class="project-item color-3"></article>
+                <article class="project-item color-4"></article>
+                <article class="project-item color-5"></article>
+                <article class="project-item color-6"></article>
+                <article class="project-item color-7"></article>
+                <article class="project-item color-8"></article>
             </div>
-        </div>
+        </section>
+        <section class="development container color-2 hidden">
+        </section>
+        <section class="contact container color-3 hidden">
+        </section>
+        <section class="personal container color-4 hidden">
+        </section>
+        <section class="project-load container hidden">
+        </section>
+
 
 
         <!-- build:js scripts/vendor.js -->
@@ -53,6 +75,7 @@
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/onScreen/jquery.onscreen.js"></script>
         <script src="bower_components/jquery-backstretch/jquery.backstretch.js"></script>
+        <script src="bower_components/swiper/src/idangerous.swiper.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
