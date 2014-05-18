@@ -4,45 +4,28 @@
     var MenuItem = function MenuItem() {};
     MenuItem.prototype = {
         constructor: MenuItem,
-        load: function ( name ) {
+        load: function () {
+            var $this = $(this);
+
             $('.backstretch').hide();
-            $('section.container').addClass('hidden')
-            switch (name) {
-                case 'architecture':
-                    $('section.architecture').removeClass('hidden');
-                    break;
-                case 'development':
-                    $('section.development').removeClass('hidden');
-                    break;
-                case 'contact':
-                    $('section.contact').removeClass('hidden');
-                    break;
-                case 'personal':
-                    $('section.personal').removeClass('hidden');
-                    break;
-                default:
-                    loadProject.call(this, $(this).prop('href'));
+            $('section.container').addClass('hidden');
+
+            if ( $this.hasClass('folders') ) {
+                loadSelectProject.call(this, $this.prop('href'));
+            } else {
+                loadProject.call(this, $this.prop('href'));
             }
+
             return false;
         },
-        onClick: function (event) {
+        onClick: function ( event ) {
             var $this = $(this),
                 $parent = $this.parent('nav');
 
             $('.active', $parent).removeClass('active');
             $this.addClass('active');
-            MenuItem.prototype.load.call($this, $this.data('name'));
-            mySwiper.resizeFix();
+            MenuItem.prototype.load.call($this);
 
-            /*
-            MenuItem.prototype.load($this.data('src'), function() {
-                $('div.container .personal-box').onScreen({
-                    container: '.personal-wrap',
-                    direction: 'horizontal',
-                    toggleClass: 'show',
-                    tolerance: 50
-                });*/
-            //});
             return false;
         },
         onToggle: function( event ){
@@ -53,7 +36,7 @@
         }
     }
 
-    function openProject(event) {
+    function openProject( event ) {
         var url = $(this).prop('href');
 
         loadProject.call(this, url);
@@ -61,12 +44,12 @@
         return false;
     }
 
-    function loadProject(url) {
+    function loadProject( url ) {
         $('.project-load').load(url, function() {
             $('section.container').addClass('hidden');
             $(this).removeClass('hidden');
 
-            var mySwiper = new Swiper(this, {
+            var mySwiper = new Swiper('.project-load', {
                 wrapperClass: 'container-wrapper',
                 slideClass: 'project-image',
                 slidesPerView: 'auto',
@@ -74,39 +57,25 @@
                 mousewheelControl: true
             });
 
-            imageSize();
+            setTimeout(imageSize, 100);
         });
     }
-/*
-    function splitColumns() {
-        var winWidth = $(window).width(),
-            columnNumb = 1;
 
-        if (winWidth > 1024) {
-            columnNumb = 3;
-        } else if (winWidth > 900) {
-            columnNumb = 2;
-        } else if (winWidth > 479) {
-            columnNumb = 2;
-        } else if (winWidth < 479) {
-            columnNumb = 1;
-        }
+    function loadSelectProject( url ) {
+        $('.project-load').load(url, function() {
+            $('section.container').addClass('hidden');
+            $(this).removeClass('hidden');
 
-        return columnNumb;
-    }
-
-    function setColumns() {
-        var winWidth = $(window).width(),
-            columnNumb = splitColumns(),
-            postWidth = Math.floor(winWidth / columnNumb);
-
-        $('.portfolio').find('.portfolio-item').each(function () {
-            $(this).css( {
-                width : postWidth + 'px'
+            var mySwiper = new Swiper('.project-load', {
+                wrapperClass: 'container-wrapper',
+                slideClass: 'project-item',
+                slidesPerView: 'auto',
+                scrollContainer: true,
+                mousewheelControl: true
             });
         });
     }
-*/
+
     function imageSize() {
         var height = $(window).height();
 
@@ -132,14 +101,6 @@
               , "images/panorama/11_Panarama 2x.jpg"
               , "images/panorama/12_Panarama 2x.jpg"
             ], {duration: 3000, fade: 750});
-
-            mySwiper = new Swiper('section.architecture', {
-                wrapperClass: 'container-wrapper',
-                slideClass: 'project-item',
-                slidesPerView: 'auto',
-                scrollContainer: true,
-                mousewheelControl: true
-            })
         });
 
 
