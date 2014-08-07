@@ -18,13 +18,6 @@ module.exports = function (grunt) {
     // Define the configuration for all the tasks
     grunt.initConfig({
 
-        // Project settings
-        yeoman: {
-            // Configurable paths
-            app: 'app',
-            dist: 'dist'
-        },
-
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             js: {
@@ -316,6 +309,17 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            },
+            scripts: {
+              expand: true,
+              dot: true,
+              flatten: true,
+              filter: 'isFile',
+              dest: 'app/scripts/vendor/',
+              src: [
+                'bower_components/jquery/jquery.min.js',
+                'bower_components/jquery-backstretch/jquery.backstretch.min.js',
+              ]
             }
         },
 
@@ -339,14 +343,14 @@ module.exports = function (grunt) {
                 'compass:server',
                 'copy:styles'
             ],
-            test: [
-                'copy:styles'
-            ],
             dist: [
                 'compass',
                 'copy:styles',
                 'imagemin',
                 'svgmin'
+            ],
+            jekyll: [
+              'copy:scripts'
             ]
         },
         // Publish on gh-pages github
@@ -418,5 +422,9 @@ module.exports = function (grunt) {
         'newer:jshint',
         'test',
         'build'
+    ]);
+
+    grunt.registerTask('server:jekyll', [
+        'concurrent:jekyll'
     ]);
 };

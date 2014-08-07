@@ -1,5 +1,5 @@
 (function() {
-    var mySwiper = null;
+  /*  var mySwiper = null;
 
     var MenuItem = function MenuItem() {};
     MenuItem.prototype = {
@@ -80,7 +80,7 @@
         var height = $(window).height();
 
         $('.project-image').height( height - 200 );
-    }
+    }*/
 
     $(document)
         .on('click','.navigation nav a', MenuItem.prototype.onClick)

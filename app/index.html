@@ -1,92 +1,24 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <link
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>eefjehendriks nl</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <header>
-            <a class="logo" href="index.html">
-                Eefje Hendriks
-            </a>
-            <div class="navigation">
-                <a class="toggle">
-                    <span class="lines"></span>
-                </a>
-                <nav class="navigation">
-                    <a class="folders" href="tmpl/architecture.html">
-                        Architecture</a>
-                    <a class="folders" href="tmpl/development.html">
-                        Development
-                    </a>
-                    <a href="tmpl/drawings.html">Drawings</a>
-                    <a href="#" data-name="personal">
-                        Personal
-                    </a>
-                    <a href="#" data-name="contact">Contact</a>
-                </nav>
-            </div>
+---
+layout: default
+---
 
-        </header>
-        <section class="contact container color-3 hidden">
-        </section>
-        <section class="personal container color-4 hidden">
-        </section>
-        <section class="project-load container hidden">
-            <div class="container-wrapper">
-                <article class="project-item color-1"></article>
-                <article class="project-item color-2"s></article>
-                <article class="project-item color-3"></article>
-                <article class="project-item color-4"></article>
-                <article class="project-item color-5"></article>
-                <article class="project-item color-6"></article>
-                <article class="project-item color-7"></article>
-                <article class="project-item color-8"></article>
-            </div>
-        </section>
-
-
-
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/onScreen/jquery.onscreen.js"></script>
-        <script src="bower_components/jquery-backstretch/jquery.backstretch.js"></script>
-        <script src="bower_components/swiper/src/idangerous.swiper.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-</body>
-</html>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery-backstretch/jquery.backstretch.js"></script>
+<script type="">
+    $(document).ready(function() {
+        $.backstretch([
+            "images/panorama/01_Panarama 2x.jpg"
+          , "images/panorama/02_Panarama 2x.jpg"
+          , "images/panorama/03_Panarama 2x.jpg"
+          , "images/panorama/04_Panarama 2x.jpg"
+          , "images/panorama/05_Panarama 2x.jpg"
+          , "images/panorama/06_Panarama 2x.jpg"
+          , "images/panorama/07_Panarama 2x.jpg"
+          , "images/panorama/08_Panarama 2x.jpg"
+          , "images/panorama/09_Panarama 2x.jpg"
+          , "images/panorama/10_Panarama 2x.jpg"
+          , "images/panorama/11_Panarama 2x.jpg"
+          , "images/panorama/12_Panarama 2x.jpg"
+        ], {duration: 3000, fade: 750});
+    });
+</script>
