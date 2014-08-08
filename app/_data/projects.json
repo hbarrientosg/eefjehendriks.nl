@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Emergency strategy Haiti",
+    "category": ["architecture", "development"],
+    "image": "/images/projects/haiti/01.jpg",
+    "type": "large"
+  },
+  {
+    "name": "Buerchen Mystik",
+    "category": ["architecture"],
+    "image": "/images/projects/buerchen/01.jpg",
+    "type": "small"
+  },
+  {
+    "name": "Green Box",
+    "category": ["architecture"],
+    "image": "/images/projects/greenbox/01.jpg",
+    "type": "small"
+  },
+  {
+    "name": "Swing altar",
+    "category": ["architecture"],
+    "image": "/images/projects/x",
+    "type": "small"
+  },
+  {
+    "name": "Musical intermezzo",
+    "category": ["architecture"],
+    "image": "/images/projects/x",
+    "type": "small"
+  },
+  {
+    "name": "Mecanoo",
+    "category": ["architecture"],
+    "image": "/images/projects/x",
+    "type": "large"
+  },
+  {
+    "name": "Music centre on the sea",
+    "category": ["architecture"],
+    "image": "/images/projects/x",
+    "type": "small"
+  },
+  {
+    "name": "Samara Urban plan",
+    "category": ["architecture"],
+    "image": "/images/projects/x",
+    "type": "small"
+  },
+  {
+    "name": "Hurricaneresistant school Nicaragua",
+    "category": ["development"],
+    "image": "/images/projects/x",
+    "type": "large"
+  },
+  {
+    "name": "Transitional shelter Pakistan",
+    "category": ["development"],
+    "image": "/images/projects/x",
+    "type": "small"
+  },
+  {
+    "name": "Slums of Buenos Aires",
+    "category": ["development"],
+    "image": "/images/projects/x",
+    "type": "large"
+  },
+  {
+    "name": "Drawings",
+    "category": ["drawings"],
+    "image": "/images/projects/x",
+    "type": "large"
+  },
+]

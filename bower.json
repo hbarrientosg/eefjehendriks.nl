@@ -8,6 +8,10 @@
     "jquery-backstretch": "~2.0.4",
     "retina.js": "~1.3.0",
     "onScreen": "*",
-    "swiper": "~2.6.1"
+    "swiper": "~2.6.1",
+    "isotope-masonry-horizontal": "metafizzy/isotope-masonry-horizontal#~0.1.2"
+  },
+  "dependencies": {
+    "isotope": "~2.0.0"
   }
 }
