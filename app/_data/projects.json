@@ -20,55 +20,55 @@
   {
     "name": "Swing altar",
     "category": ["architecture"],
-    "image": "/images/projects/x",
+    "image": "/images/projects/altar/01.jpg",
     "type": "small"
   },
   {
     "name": "Musical intermezzo",
     "category": ["architecture"],
-    "image": "/images/projects/x",
+    "image": "/images/projects/intermezzo/01.jpg",
     "type": "small"
   },
   {
     "name": "Mecanoo",
     "category": ["architecture"],
-    "image": "/images/projects/x",
+    "image": "/images/projects/mecanoo/01.jpg",
     "type": "large"
   },
   {
     "name": "Music centre on the sea",
     "category": ["architecture"],
-    "image": "/images/projects/x",
+    "image": "/images/projects/music/01.jpg",
     "type": "small"
   },
   {
     "name": "Samara Urban plan",
     "category": ["architecture"],
-    "image": "/images/projects/x",
+    "image": "/images/projects/samara/01.jpg",
     "type": "small"
   },
   {
     "name": "Hurricaneresistant school Nicaragua",
     "category": ["development"],
-    "image": "/images/projects/x",
+    "image": "/images/projects/nicaragua/01.jpg",
     "type": "large"
   },
   {
     "name": "Transitional shelter Pakistan",
     "category": ["development"],
-    "image": "/images/projects/x",
+    "image": "/images/projects/pakistan/01.jpg",
     "type": "small"
   },
   {
     "name": "Slums of Buenos Aires",
     "category": ["development"],
-    "image": "/images/projects/x",
+    "image": "/images/projects/slums/01.jpg",
     "type": "large"
   },
   {
     "name": "Drawings",
     "category": ["drawings"],
-    "image": "/images/projects/x",
+    "image": "/images/projects/drawings/01.jpg",
     "type": "large"
   },
 ]

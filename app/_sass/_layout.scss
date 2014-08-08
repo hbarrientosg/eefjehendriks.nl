@@ -1,9 +1,15 @@
 
 *, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  outline: 0;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased !important;
+          font-smoothing: antialiased;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
+	   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	        box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 html, body {

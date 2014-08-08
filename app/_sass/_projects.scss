@@ -1,29 +1,22 @@
-
+.projects {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 .projects-wrapper {
   width: 100%;
   height: 100%;
-}
 
-.project {
-  border: 1px solid white;
-  overflow: hidden;
-  width: 360px;
-  height: 360px;
-
+  .project {
+    border: 1px solid white;
+    overflow: hidden;
+  }
   .image {
+    position: relative;
+    z-index: 10;
+  }
+  .image, img {
     width: 100%;
     height: 100%;
   }
-}
-
-.image {
-  position: relative;
-  z-index: 10;
-}
-.small {
-  width: 225px;
-}
-
-.large {
-  width: 550px;
 }
