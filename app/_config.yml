@@ -11,3 +11,12 @@ year: 2014
 # SASS Configuration
 sass:
   sass_dir: _sass
+
+# Jekyll Configuration
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
+permalink: /archive/:year/:month/:day/:title/
+paginate: 2
+paginate_path: "/blog/page/:num"
+category_dir: categories
