@@ -1,11 +1,19 @@
 $(document).ready(function() {
   var $header = $('.header'),
       $window = $(window),
-      $projects = $('.projects-wrapper'),
+      $projects = $('.projects'),
+      $wrapper = $('.projects-wrapper'),
       projectsH = 0,
       projectW = 0,
       width = 0,
       height = 0;
+
+  $wrapper.extraScrollbar({
+      paddingLeft: 60,
+      suppressScrollY: true,
+      useBothWheelAxes: true,
+      enableMouseWheel: true
+  });
 
   function resizeHandler() {
     if( $window.width() !== width || $window.height() !== height) {
@@ -20,24 +28,30 @@ $(document).ready(function() {
         projectW = projectsH;
       }
 
-      $projects.height(projectsH);
-      $('.project',$projects).each(function() {
+      $wrapper.height(projectsH);
+      $('.project',$wrapper).each(function() {
         //  1px border left and 1px boder right
         $(this).height(projectW - 2).width(projectW - 2);
         if ( $(this).hasClass('large') ) {
           $(this).width(projectW * 2 - 2);
         }
       });
+      if ($wrapper.data("isotope")) {
+          $wrapper.isotope('layout');
+          $projects.extraScrollbar('update');
+      }
     }
   }
+  resizeHandler();
 
-
-  $projects.isotope({
+  $wrapper.isotope({
     itemselector: '.project',
     layoutMode: 'masonryHorizontal',
     masonryHorizontal: { rowHeight: '.project'}
   });
+  $wrapper.isotope('on', 'layoutComplete', function() {
+      $projects.extraScrollbar('update');
+  });
 
-  ($window.resize(resizeHandler)).resize();
-
+  $window.resize(resizeHandler);
 });

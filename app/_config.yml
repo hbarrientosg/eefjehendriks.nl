@@ -2,12 +2,12 @@
 # Blog Settings
 #
 author: Eefje Hendriks
+year: 2014
 
 # Google Analytics
 # google_analytics_tracking_id: UA-XXXXXXXX
 
 
 # SASS Configuration
-
 sass:
   sass_dir: _sass
