@@ -1,15 +1,21 @@
-<header class="header">
-    <a class="logo" href="/">{{ site.author }}</a>
-    <div class="navigation">
-        <a class="toggle">
-            <span class="lines"></span>
-        </a>
-        <nav class="navigation">
-            <a href="/blog/">Blog</a>
-            <a href="/research/">Research</a>
-            <a href="/projects/">Projects</a>
-            <a href="/about/">About</a>
-            <a href="#">Contact</a>
-        </nav>
+<header class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-mobile">
+        <span class="fa fa-bars"></span>
+      </button>
+      <a class="navbar-brand" href="/">{{ site.author }}</a>
     </div>
+
+    <div class="navbar-collapse collapse" id="menu-mobile">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/research/">Research</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
 </header>
