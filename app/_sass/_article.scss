@@ -1,0 +1,80 @@
+
+.date:before,
+.tags:before,
+.edit:before,
+.comments:before {
+  color: #ccc;
+  font: 1.3em FontAwesome;
+  left: 0;
+  margin-right: 5px;
+}
+
+article {
+  border-top: none;
+  padding: 80px 0px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  h1.title {
+    font-family: $primary-font;
+    font-size: 3em;
+    padding-bottom: 15px;
+    a {
+      color: #333;
+    }
+  }
+  .meta {
+    font-size: 1.3em;
+
+    .date,
+    .tags,
+    .edit,
+    .coments {
+      display: inline;
+      padding-right: 10px;
+    }
+
+    .date:before { content: "\f073"; }
+    .tags:before { content: "\f02C"; }
+    .edit:before { content: "\f044"; }
+    .comments:before { content: "\f075"; }
+
+    a {
+      color: #999;
+      text-decoration: none;
+      outline-width: 0;
+    }
+
+    a:hover { color: #666; }
+
+  }
+  .entry-content {
+    margin-left: 0px;
+    line-height: 1.4em;
+    font-size: 1.5em;
+
+      p {
+        margin-top: 30px;
+      }
+      h2 {
+        font-size: 1.3em;
+        margin-top: 30px;
+        margin-bottom: -20px;
+        font-weight: bold;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+     .caption {
+        display: block;
+        font-style: italic;
+        font-size: 0.6em;
+        font-family: helvetica, arial, san-serif;
+        color: #999;
+        padding-left: 15px;
+        position: relative;
+        margin-top: -5px;
+    }
+  }
+}

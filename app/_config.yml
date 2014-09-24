@@ -4,6 +4,14 @@
 author: Eefje Hendriks
 year: 2014
 
+
+# Github repositories
+github_repo_url: https://github.com/Haacked/haacked.com/
+
+# Disqus Comments
+disqus_short_name: EefjeHendriks
+disqus_show_comment_count: true
+
 # Google Analytics
 # google_analytics_tracking_id: UA-XXXXXXXX
 
@@ -17,6 +25,6 @@ markdown: redcarpet
 redcarpet:
   extensions: ["tables"]
 permalink: /archive/:year/:month/:day/:title/
-paginate: 2
+paginate: 5
 paginate_path: "/blog/page/:num"
 category_dir: categories
